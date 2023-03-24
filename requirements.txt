@@ -1,2 +1,4 @@
 pymongo==4.2.0
+traceback2
+
 -e .

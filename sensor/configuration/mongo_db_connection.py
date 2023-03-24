@@ -9,7 +9,7 @@ class MongoDBClient:
         try:
             if MongoDBClient.client is None:
                 mongo_db_client = "mongodb+srv://Prashant:Prashant@cluster0.v7zxaoi.mongodb.net/mydb?retryWrites=true&w=majority"
-                MongoDBClient.client = pymongo.MongoDBClient(mongo_db_client, tlsCAFile=ca)
+                MongoDBClient.client = pymongo.MongoClient(mongo_db_client, tlsCAFile=ca)
             self.client = MongoDBClient.client
             self.database = self.client[database_name]
             self.database_name = database_name
