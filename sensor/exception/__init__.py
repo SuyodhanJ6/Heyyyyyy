@@ -2,6 +2,12 @@ import sys
 
 
 def error_message_detail(error, error_detail: sys):
+    """
+    Method Name : error_message_detail
+    Description : This method help to display error message
+    OutPut      : str
+    OnFailure   : None
+    """
     _, _, exc_tb = error_detail.exc_info()
 
     file_name = exc_tb.tb_frame.f_code.co_filename
@@ -14,6 +20,9 @@ def error_message_detail(error, error_detail: sys):
 
 
 class SensorException(Exception):
+    """
+    This class refers to an exception.
+    """
     def __init__(self, error_message, error_detail):
         """
         :param error_message: error message in string format

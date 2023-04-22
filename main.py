@@ -1,5 +1,11 @@
-from sensor.configuration.mongo_db_connection import MongoDBClient
-
+from sensor.pipeline.training_pipeline import TrainPipeline
+from sensor.exception import SensorException
+from sensor.logger import logging
+import sys
 if __name__ == '__main__':
-    mondbClient = MongoDBClient()
-    print(mondbClient.database.list_collection_names())
+    try:
+        training_pipeline = TrainPipeline()
+        training_pipeline.run_data_ingestion_config()
+        
+    except Exception as e:
+        raise logging.info(SensorException(e, sys))
