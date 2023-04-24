@@ -1,0 +1,16 @@
+[ 2023-04-23 00:04:12,483 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 00:04:13,963 ] root - INFO - Starting data ingestion
+[ 2023-04-23 00:04:16,581 ] root - INFO - Consider Local csv file
+[ 2023-04-23 00:04:17,795 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 00:04:17,865 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 00:04:17,865 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_00_04_00/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 00:04:18,565 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 00:04:18,565 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 00:04:21,912 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_00_04_00/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_00_04_00/data_ingestion/ingested/test.csv')
+[ 2023-04-23 00:05:09,406 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 00:05:10,608 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-23 00:05:12,767 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 00:05:15,410 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 00:05:15,411 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 00:05:18,545 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 00:05:18,545 ] root - INFO - Data frame has columns: 164

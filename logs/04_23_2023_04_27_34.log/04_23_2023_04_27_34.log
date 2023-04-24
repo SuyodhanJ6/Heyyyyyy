@@ -1,0 +1,17 @@
+[ 2023-04-23 04:27:34,971 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 04:27:34,971 ] root - INFO - Starting data ingestion
+[ 2023-04-23 04:27:34,989 ] root - INFO - Consider Local csv file
+[ 2023-04-23 04:27:35,966 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 04:27:36,036 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 04:27:36,036 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_04_27_34/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 04:27:36,803 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 04:27:36,803 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 04:27:38,447 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_04_27_34/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_04_27_34/data_ingestion/ingested/test.csv')
+[ 2023-04-23 04:27:38,466 ] root - INFO - Starting data validation
+[ 2023-04-23 04:27:39,428 ] root - INFO - Is required column present: [True]
+[ 2023-04-23 04:27:39,428 ] root - INFO - All required columns present in training dataframe: True
+[ 2023-04-23 04:27:39,428 ] root - INFO - Is required column present: [True]
+[ 2023-04-23 04:27:39,428 ] root - INFO - All required columns present in testing dataframe: True
+[ 2023-04-23 04:27:39,428 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 04:27:39,428 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 04:27:39,429 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [79] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [49] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_validation.py] line number [162] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_validation.py] line number [84] error message [name 'ks_2samp' is not defined]]]]]

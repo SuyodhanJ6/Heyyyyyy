@@ -1,0 +1,27 @@
+[ 2023-04-25 00:50:09,849 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-25 00:50:09,849 ] root - INFO - Starting data ingestion
+[ 2023-04-25 00:50:09,868 ] root - INFO - Consider Local csv file
+[ 2023-04-25 00:50:11,196 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-25 00:50:11,260 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:50:11,260 ] root - INFO - Saving exported data into feature store file path: artifact/04_25_2023_00_50_09/data_ingestion/feature_store/sensor.csv
+[ 2023-04-25 00:50:11,967 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:50:11,967 ] root - INFO - Starting the train and test splittings
+[ 2023-04-25 00:50:13,452 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_25_2023_00_50_09/data_ingestion/ingested/train.csv', test_file_path='artifact/04_25_2023_00_50_09/data_ingestion/ingested/test.csv')
+[ 2023-04-25 00:50:14,433 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:50:14,433 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-25 00:50:14,433 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:50:14,433 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:50:14,433 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:50:14,433 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:50:14,433 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:50:20,592 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, valid_train_file_path='artifact/04_25_2023_00_50_09/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_25_2023_00_50_09/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_25_2023_00_50_09/data_validation/drift_report/report.yaml')
+[ 2023-04-25 00:50:46,024 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 00:50:46,033 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 00:50:46,033 ] root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='artifact/04_25_2023_00_50_09/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='artifact/04_25_2023_00_50_09/data_transformation/transformed/train.npy', transformed_test_file_path='artifact/04_25_2023_00_50_09/data_transformation/transformed/test.npy')
+[ 2023-04-25 00:51:01,739 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2023-04-25 00:51:01,740 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2023-04-25 00:51:01,740 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 00:51:01,745 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 00:51:01,745 ] root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact/04_25_2023_00_50_09/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=0.9999821673769995, precision_score=1.0, recall_score=0.9999643353899925), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9771590167500543, precision_score=0.9920494699646644, recall_score=0.9627089584226318))
+[ 2023-04-25 00:51:03,109 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [125] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [98] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/mode_evalution.py]
+ line number [48] error message ['ModelResolver' object has no attribute 'is_model_exists']]]]

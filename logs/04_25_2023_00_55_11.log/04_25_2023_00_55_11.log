@@ -1,0 +1,27 @@
+[ 2023-04-25 00:55:11,705 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-25 00:55:11,705 ] root - INFO - Starting data ingestion
+[ 2023-04-25 00:55:11,725 ] root - INFO - Consider Local csv file
+[ 2023-04-25 00:55:12,965 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-25 00:55:13,048 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:55:13,048 ] root - INFO - Saving exported data into feature store file path: artifact/04_25_2023_00_55_11/data_ingestion/feature_store/sensor.csv
+[ 2023-04-25 00:55:13,862 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:55:13,862 ] root - INFO - Starting the train and test splittings
+[ 2023-04-25 00:55:15,473 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_25_2023_00_55_11/data_ingestion/ingested/train.csv', test_file_path='artifact/04_25_2023_00_55_11/data_ingestion/ingested/test.csv')
+[ 2023-04-25 00:55:16,429 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:55:16,429 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-25 00:55:16,429 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:55:16,429 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:55:16,429 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:55:16,429 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:55:16,429 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:55:21,580 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_25_2023_00_55_11/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_25_2023_00_55_11/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_25_2023_00_55_11/data_validation/drift_report/report.yaml')
+[ 2023-04-25 00:55:46,937 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 00:55:46,997 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 00:55:46,998 ] root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='artifact/04_25_2023_00_55_11/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='artifact/04_25_2023_00_55_11/data_transformation/transformed/train.npy', transformed_test_file_path='artifact/04_25_2023_00_55_11/data_transformation/transformed/test.npy')
+[ 2023-04-25 00:56:01,529 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2023-04-25 00:56:01,531 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2023-04-25 00:56:01,531 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 00:56:01,535 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 00:56:01,535 ] root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact/04_25_2023_00_55_11/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=1.0, precision_score=1.0, recall_score=1.0), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9841637139344855, precision_score=0.9938659266832189, recall_score=0.9746490976797479))
+[ 2023-04-25 00:56:02,766 ] root - INFO - Model evaluation artifact: ModelEvaluationArtifact(is_model_accepted=True, improved_accuracy=None, best_model_path=None, trained_model_path='artifact/04_25_2023_00_55_11/model_trainer/trained_model/model.pkl', train_model_metric_artifact=ClassificationMetricArtifact(f1_score=0.9841637139344855, precision_score=0.9938659266832189, recall_score=0.9746490976797479), best_model_metric_artifact=None)
+[ 2023-04-25 00:56:02,826 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [131] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [110] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/mode_pusher.py] line number [27] error message ['ModelTrainerArtifact' object has no attribute 'trained_model_path']]]]

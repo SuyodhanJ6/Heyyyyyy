@@ -1,5 +1,7 @@
 pymongo==4.2.0
 evidently==0.3.0
 data-drift-detector==0.0.13
-
+dill
+imblearn
+xgboost
 -e .

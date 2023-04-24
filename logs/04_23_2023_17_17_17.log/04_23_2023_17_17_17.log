@@ -1,0 +1,20 @@
+[ 2023-04-23 17:17:17,827 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 17:17:17,827 ] root - INFO - Starting data ingestion
+[ 2023-04-23 17:17:17,851 ] root - INFO - Consider Local csv file
+[ 2023-04-23 17:17:18,979 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 17:17:19,057 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 17:17:19,057 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_17_17_17/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 17:17:20,084 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 17:17:20,084 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 17:17:22,077 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_17_17_17/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_17_17_17/data_ingestion/ingested/test.csv')
+[ 2023-04-23 17:17:23,423 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 17:17:23,423 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-23 17:17:23,423 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 17:17:23,424 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 17:17:23,424 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 17:17:23,424 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 17:17:23,424 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 17:17:29,225 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_23_2023_17_17_17/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_23_2023_17_17_17/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_23_2023_17_17_17/data_validation/drift_report/report.yaml')
+[ 2023-04-23 17:17:55,068 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-23 17:17:55,071 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-23 17:17:55,072 ] root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='artifact/04_23_2023_17_17_17/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='artifact/04_23_2023_17_17_17/data_transformation/transformed/train.npy', transformed_test_file_path='artifact/04_23_2023_17_17_17/data_transformation/transformed/test.npy')

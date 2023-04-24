@@ -3,11 +3,6 @@ import sys,os
 from pandas import DataFrame
 import pandas as pd 
 from scipy.stats import ks_2samp
-# from evidently.model_profile import Profile
-# from evidently.model_profile.sections import DataDriftProfileSection
-
-# from evidently.model_profile import Profile
-# from evidently.model_profile.sections import DataDriftProfileSection
 
 from sensor.constant.training_pipeline import SCHEMA_FILE_PATH
 from sensor.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact
@@ -112,34 +107,38 @@ class DataValidation:
             raise SensorException(e, sys)
         
     
-    def detect_dataset_drift(self,base_df,current_df,threshold=0.05)->bool:
+    def detect_dataset_drift(self, base_df: pd.DataFrame, current_df: pd.DataFrame, threshold: float = 0.05) -> bool:
         try:
-            status=True
-            report ={}
+            status = True
+            report = {}
             for column in base_df.columns:
                 d1 = base_df[column]
-                d2  = current_df[column]
-                is_same_dist = ks_2samp(d1,d2)
-                if threshold<=is_same_dist.pvalue:
-                    is_found=False
+                d2 = current_df[column]
+                is_same_dist = ks_2samp(d1, d2)
+                if threshold <= is_same_dist.pvalue:
+                    is_found = False
                 else:
-                    is_found = True 
-                    status=False
-                report.update({column:{
-                    "p_value":float(is_same_dist.pvalue),
-                    "drift_status":is_found
-                    
-                    }})
+                    is_found = True
+                    status = False
+                report.update({
+                    column: {
+                        "p_value": float(is_same_dist.pvalue),
+                        "drift_status": is_found
+                    }
+                })
             
             drift_report_file_path = self.data_validation_config.drift_report_file_path
             
-            #Create directory
+            # Create directory
             dir_path = os.path.dirname(drift_report_file_path)
-            os.makedirs(dir_path,exist_ok=True)
-            write_yaml_file(file_path=drift_report_file_path,content=report,)
+            os.makedirs(dir_path, exist_ok=True)
+            write_yaml_file(file_path=drift_report_file_path, content=report)
+            
             return status
+        
         except Exception as e:
-            raise SensorException(e,sys)
+            raise SensorException(e, sys)
+
 
     def initialize_data_validation(self):
         """
@@ -194,5 +193,3 @@ class DataValidation:
             return data_validation_artifact
         except Exception as e:
             raise SensorException(e, sys)
-            
-        

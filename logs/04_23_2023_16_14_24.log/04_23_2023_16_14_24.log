@@ -1,0 +1,18 @@
+[ 2023-04-23 16:14:24,643 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 16:14:24,643 ] root - INFO - Starting data ingestion
+[ 2023-04-23 16:14:24,667 ] root - INFO - Consider Local csv file
+[ 2023-04-23 16:14:25,915 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 16:14:26,001 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 16:14:26,001 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_16_14_24/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 16:14:27,041 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 16:14:27,041 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 16:14:29,249 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_16_14_24/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_16_14_24/data_ingestion/ingested/test.csv')
+[ 2023-04-23 16:14:30,502 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 16:14:30,502 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-23 16:14:30,503 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 16:14:30,503 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 16:14:30,503 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 16:14:30,503 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 16:14:30,503 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 16:14:36,726 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_23_2023_16_14_24/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_23_2023_16_14_24/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_23_2023_16_14_24/data_validation/drift_report/report.yaml')
+[ 2023-04-23 16:14:36,765 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [82] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [58] error message [__init__() got an unexpected keyword argument 'data_valiation_artifact']]]

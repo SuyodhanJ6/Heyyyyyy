@@ -1,0 +1,28 @@
+[ 2023-04-23 16:46:34,990 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 16:46:34,991 ] root - INFO - Starting data ingestion
+[ 2023-04-23 16:46:35,011 ] root - INFO - Consider Local csv file
+[ 2023-04-23 16:46:36,162 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 16:46:36,242 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 16:46:36,243 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_16_46_34/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 16:46:37,312 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 16:46:37,313 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 16:46:39,190 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_16_46_34/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_16_46_34/data_ingestion/ingested/test.csv')
+[ 2023-04-23 16:46:40,414 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 16:46:40,414 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-23 16:46:40,414 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 16:46:40,414 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 16:46:40,415 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 16:46:40,415 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 16:46:40,415 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 16:46:45,563 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_23_2023_16_46_34/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_23_2023_16_46_34/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_23_2023_16_46_34/data_validation/drift_report/report.yaml')
+[ 2023-04-23 16:46:45,602 ] root - INFO - Starting data transformation
+[ 2023-04-23 16:46:45,603 ] root - INFO - Entered get_data_transformer_object method of DataTransformation class
+[ 2023-04-23 16:46:45,603 ] root - INFO - Got numerical cols from schema config
+[ 2023-04-23 16:46:45,603 ] root - INFO - Initialized RobustScaler, Simple Imputer
+[ 2023-04-23 16:46:45,603 ] root - INFO - Created preprocessor object from ColumnTransformer
+[ 2023-04-23 16:46:45,603 ] root - INFO - Exited get_data_transformer_object method of DataTransformation class
+[ 2023-04-23 16:46:45,603 ] root - INFO - Got the preprocessor object
+[ 2023-04-23 16:46:46,593 ] root - INFO - Got train features and test features of Training dataset
+[ 2023-04-23 16:46:46,601 ] root - INFO - Got train features and test features of Testing dataset
+[ 2023-04-23 16:46:46,602 ] root - INFO - Applying preprocessing object on training dataframe and testing dataframe
+[ 2023-04-23 16:46:47,051 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [82] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [60] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_transformation.py] line number [292] error message [could not convert string to float: 'na']]]]

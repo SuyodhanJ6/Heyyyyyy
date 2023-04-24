@@ -1,0 +1,17 @@
+[ 2023-04-25 00:49:14,149 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-25 00:49:14,149 ] root - INFO - Starting data ingestion
+[ 2023-04-25 00:49:14,170 ] root - INFO - Consider Local csv file
+[ 2023-04-25 00:49:15,545 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-25 00:49:15,620 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:49:15,621 ] root - INFO - Saving exported data into feature store file path: artifact/04_25_2023_00_49_13/data_ingestion/feature_store/sensor.csv
+[ 2023-04-25 00:49:16,612 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 00:49:16,612 ] root - INFO - Starting the train and test splittings
+[ 2023-04-25 00:49:18,489 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_25_2023_00_49_13/data_ingestion/ingested/train.csv', test_file_path='artifact/04_25_2023_00_49_13/data_ingestion/ingested/test.csv')
+[ 2023-04-25 00:49:19,782 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:49:19,782 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-25 00:49:19,783 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 00:49:19,783 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:49:19,783 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:49:19,783 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 00:49:19,783 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 00:49:22,326 ] root - INFO - Error occurred python script name [main.py] line number [8] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [119] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [63] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_validation.py] line number [181] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_validation.py] line number [117] error message ['<' not supported between instances of 'float' and 'str']]]]]

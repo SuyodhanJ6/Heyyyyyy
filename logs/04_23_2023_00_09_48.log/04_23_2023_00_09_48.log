@@ -1,0 +1,17 @@
+[ 2023-04-23 00:09:49,158 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-23 00:09:49,158 ] root - INFO - Starting data ingestion
+[ 2023-04-23 00:09:49,178 ] root - INFO - Consider Local csv file
+[ 2023-04-23 00:09:50,251 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-23 00:09:50,310 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 00:09:50,310 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_00_09_48/data_ingestion/feature_store/sensor.csv
+[ 2023-04-23 00:09:51,007 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-23 00:09:51,007 ] root - INFO - Starting the train and test splittings
+[ 2023-04-23 00:09:52,473 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_00_09_48/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_00_09_48/data_ingestion/ingested/test.csv')
+[ 2023-04-23 00:09:53,694 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 00:09:53,694 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-23 00:09:53,694 ] root - INFO - Missing numerical column: []
+[ 2023-04-23 00:09:53,694 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 00:09:53,694 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 00:09:53,694 ] root - INFO - Required number of columns: 164
+[ 2023-04-23 00:09:53,694 ] root - INFO - Data frame has columns: 164
+[ 2023-04-23 00:09:59,082 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_23_2023_00_09_48/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_23_2023_00_09_48/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_23_2023_00_09_48/data_validation/drift_report/report.yaml')
