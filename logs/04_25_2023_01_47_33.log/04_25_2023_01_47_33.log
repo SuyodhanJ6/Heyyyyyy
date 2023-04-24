@@ -1,0 +1,28 @@
+[ 2023-04-25 01:47:33,589 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
+[ 2023-04-25 01:47:33,589 ] root - INFO - Starting data ingestion
+[ 2023-04-25 01:47:33,607 ] root - INFO - Consider Local csv file
+[ 2023-04-25 01:47:34,516 ] root - INFO - Shape of dataframe: (36188, 171)
+[ 2023-04-25 01:47:34,572 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 01:47:34,572 ] root - INFO - Saving exported data into feature store file path: artifact/04_25_2023_01_47_33/data_ingestion/feature_store/sensor.csv
+[ 2023-04-25 01:47:35,183 ] root - INFO - Shape of dataframe: (36188, 164)
+[ 2023-04-25 01:47:35,183 ] root - INFO - Starting the train and test splittings
+[ 2023-04-25 01:47:36,525 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_25_2023_01_47_33/data_ingestion/ingested/train.csv', test_file_path='artifact/04_25_2023_01_47_33/data_ingestion/ingested/test.csv')
+[ 2023-04-25 01:47:37,411 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 01:47:37,411 ] root - INFO - Valid Numerical Column : True
+[ 2023-04-25 01:47:37,411 ] root - INFO - Missing numerical column: []
+[ 2023-04-25 01:47:37,411 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 01:47:37,411 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 01:47:37,411 ] root - INFO - Required number of columns: 164
+[ 2023-04-25 01:47:37,411 ] root - INFO - Data frame has columns: 164
+[ 2023-04-25 01:47:42,380 ] root - INFO - Data validation artifact: DataValidationArtifact(validation_status=False, valid_train_file_path='artifact/04_25_2023_01_47_33/data_ingestion/ingested/train.csv', valid_test_file_path='artifact/04_25_2023_01_47_33/data_ingestion/ingested/test.csv', invalid_train_file_path=None, invalid_test_file_path=None, drift_report_file_path='artifact/04_25_2023_01_47_33/data_validation/drift_report/report.yaml')
+[ 2023-04-25 01:48:01,192 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 01:48:01,193 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 01:48:01,194 ] root - INFO - Data transformation artifact: DataTransformationArtifact(transformed_object_file_path='artifact/04_25_2023_01_47_33/data_transformation/transformed_object/preprocessing.pkl', transformed_train_file_path='artifact/04_25_2023_01_47_33/data_transformation/transformed/train.npy', transformed_test_file_path='artifact/04_25_2023_01_47_33/data_transformation/transformed/test.npy')
+[ 2023-04-25 01:48:14,036 ] root - INFO - Entered the load_object method of MainUtils class
+[ 2023-04-25 01:48:14,036 ] root - INFO - Exited the load_object method of MainUtils class
+[ 2023-04-25 01:48:14,036 ] root - INFO - Entered the save_object method of MainUtils class
+[ 2023-04-25 01:48:14,039 ] root - INFO - Exited the save_object method of MainUtils class
+[ 2023-04-25 01:48:14,039 ] root - INFO - Model trainer artifact: ModelTrainerArtifact(trained_model_file_path='artifact/04_25_2023_01_47_33/model_trainer/trained_model/model.pkl', train_metric_artifact=ClassificationMetricArtifact(f1_score=1.0, precision_score=1.0, recall_score=1.0), test_metric_artifact=ClassificationMetricArtifact(f1_score=0.9791274097695319, precision_score=0.9933823529411765, recall_score=0.9652757930837382))
+[ 2023-04-25 01:48:15,206 ] root - INFO - Model evaluation artifact: ModelEvaluationArtifact(is_model_accepted=True, improved_accuracy=None, best_model_path=None, trained_model_path='artifact/04_25_2023_01_47_33/model_trainer/trained_model/model.pkl', train_model_metric_artifact=ClassificationMetricArtifact(f1_score=0.9791274097695319, precision_score=0.9933823529411765, recall_score=0.9652757930837382), best_model_metric_artifact=None)
+[ 2023-04-25 01:48:15,279 ] root - INFO - I'm Entring into initialize_model_pusher and trained_model_path
+[ 2023-04-25 01:48:15,280 ] root - INFO - Model Pusher Artifact: ModelPusherArtifact(saved_model_path='saved_models/20230425_014733/20230425_014733/model.pkl', model_file_path='artifact/04_25_2023_01_47_33/model_pusher/model.pkl')

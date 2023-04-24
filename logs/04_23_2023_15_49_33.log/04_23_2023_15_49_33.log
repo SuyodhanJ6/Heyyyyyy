@@ -1,9 +1,0 @@
-[ 2023-04-23 15:49:33,588 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
-[ 2023-04-23 15:49:33,588 ] root - INFO - Starting data ingestion
-[ 2023-04-23 15:49:33,618 ] root - INFO - Consider Local csv file
-[ 2023-04-23 15:49:35,088 ] root - INFO - Shape of dataframe: (36188, 171)
-[ 2023-04-23 15:49:35,165 ] root - INFO - Shape of dataframe: (36188, 164)
-[ 2023-04-23 15:49:35,165 ] root - INFO - Saving exported data into feature store file path: artifact/04_23_2023_15_49_32/data_ingestion/feature_store/sensor.csv
-[ 2023-04-23 15:49:36,251 ] root - INFO - Shape of dataframe: (36188, 164)
-[ 2023-04-23 15:49:36,252 ] root - INFO - Starting the train and test splittings
-[ 2023-04-23 15:49:38,462 ] root - INFO - Data ingestion completed and artifact: DataIngestionArtifact(trained_file_path='artifact/04_23_2023_15_49_32/data_ingestion/ingested/train.csv', test_file_path='artifact/04_23_2023_15_49_32/data_ingestion/ingested/test.csv')

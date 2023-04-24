@@ -1,5 +1,0 @@
-[ 2023-04-22 11:51:09,200 ] root - INFO - Entered the start_data_ingestion method of TrainPipeline class
-[ 2023-04-22 11:51:09,200 ] root - INFO - Starting data ingestion
-[ 2023-04-22 11:51:09,201 ] root - INFO - Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/components/data_ingection.py] line number [26] error message [Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/utils/main_utils.py] line number [17] error message [unacceptable character #x0000: special characters are not allowed
-  in "config/schema.yaml", position 0]]
-[ 2023-04-22 11:51:09,201 ] root - INFO - this error due to Error occurred python script name [/home/suyodhan/Documents/Data Science Project/current_project/Heyyyyyy/sensor/pipeline/training_pipeline.py] line number [31] error message [exceptions must derive from BaseException]
