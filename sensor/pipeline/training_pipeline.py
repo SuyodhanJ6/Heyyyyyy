@@ -16,7 +16,8 @@ from sensor.entity.artifact_entity import (DataIngestionArtifact,
                                            ModelPusherArtifact)
 
 from sensor.components.data_validation import DataValidation
-
+from sensor.constant.s3_bucket import *
+from sensor.constant.training_pipeline import *
 from sensor.logger import logging
 from sensor.exception import SensorException
 from sensor.components.data_ingection import DataIngestion
@@ -24,6 +25,7 @@ from sensor.components.data_transformation import DataTransformation
 from sensor.components.mode_evalution import ModelEvalution
 from sensor.components.model_trainer import Model_Trainer
 from sensor.components.mode_pusher import ModelPusher
+from sensor.cloud_storage.s3_syncer import S3Sync
 
 
 import pandas as pd 
@@ -112,6 +114,23 @@ class TrainPipeline:
             return model_pusher_artifact
         except Exception as e:
             raise SensorException(e, sys)
+        
+
+    def sync_artifact_dir_to_s3(self):
+        try:
+            aws_bucket_url = f"s3://{TRAINING_BUCKET_NAME}/artifact/{self.training_pipeline_config.timestamp}"
+            S3Sync.sync_folder_to_s3(folder=self.training_pipeline_config.artifact_dir, aws_buket_url=aws_bucket_url)
+
+        except Exception as e:  
+            raise SensorException(e, sys)
+        
+    def sync_saved_model_dir_to_s3(self):
+        try:
+            aws_bucket_url = f"s3://{TRAINING_BUCKET_NAME}/{SAVED_MODEL_DIR}"
+            S3Sync.sync_folder_to_s3(folder=SAVED_MODEL_DIR, aws_buket_url=aws_bucket_url)
+
+        except Exception as e:  
+            raise SensorException(e, sys)
             
     def run_data_ingestion_config(self):
         try:
@@ -129,5 +148,9 @@ class TrainPipeline:
                 raise Exception("Trained model is not better than the best model")
 
             model_pusher_artifact = self.start_model_pusher(model_trainser_artifact)
+
+            self.sync_artifact_dir_to_s3()
+            self.sync_saved_model_dir_to_s3()
         except Exception as e:
+            self.sync_artifact_dir_to_s3()
             raise SensorException(e, sys)
